@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scenes/main_menu/main_menu.gd" type="Script" id=1]
+[ext_resource path="res://scenes/main_menu/logo.png" type="Texture" id=2]
+[ext_resource path="res://scenes/main_menu/get_ready.png" type="Texture" id=3]
+[ext_resource path="res://scenes/main_menu/play_button.png" type="Texture" id=4]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+margin_left = 24.0
+margin_top = 171.0
+margin_right = 264.0
+margin_bottom = 340.0
+
+[node name="TextureRect" type="TextureRect" parent="CenterContainer/VBoxContainer"]
+margin_right = 240.0
+margin_bottom = 42.0
+texture = ExtResource( 2 )
+stretch_mode = 4
+
+[node name="TextureRect2" type="TextureRect" parent="CenterContainer/VBoxContainer"]
+margin_top = 46.0
+margin_right = 240.0
+margin_bottom = 91.0
+texture = ExtResource( 3 )
+stretch_mode = 4
+
+[node name="CenterContainer" type="CenterContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 95.0
+margin_right = 240.0
+margin_bottom = 169.0
+
+[node name="play" type="TextureButton" parent="CenterContainer/VBoxContainer/CenterContainer"]
+margin_left = 51.0
+margin_right = 188.0
+margin_bottom = 74.0
+texture_normal = ExtResource( 4 )
+stretch_mode = 3
